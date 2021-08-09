@@ -1,20 +1,27 @@
 ## Introduction_to_Jenkins
+========================
 
-===
 **1. Устанавливаем docker.**
 
-Любым способом подходящим для Windows или Linux.
-
-Например:
-
+Любым способом, подходящим для Windows или Linux.<br><br>
+Например:<br>
 https://www.docker.com/products/docker-desktop
 
+----
+**2. Запускаем docker, скачивая систему с Jenkins**<br><br>
+```docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts```<br><br>
+После инсталяции Jenkins будет крутится локально по адресу  ```http://localhost:8080```
 
----
-**2. Запускаем docker, скачивая систему с Jenkins**
+----
+**3. Переходим по ссылке ```http://localhost:8080```**
+После перехода нам на странице нужно будет ввести пароль.<br><br>
+Чтобы его найти: <br>
+- Нужно ввести: ```docker ps```<br>
+- Найти образ **jenkins/jenkins**.<br>
+- Скопировать **CONTAINER ID**<br>
+- Ввести ```docker logs < название ID>```<br>
+- В логах, после строки **Please use the following password to proceed to installation**, будет пароль для входа
 
-
-""docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts""
-
-
-После инсталяции Jenkins будет крутится локально по адресу  http://localhost:8080
+----
+**4. Устанавливаем плагины. Создаем аккаунт**<br><br>
+После создания аккаунта, нам больше не понадобится пароль из  ```docker logs```.
