@@ -25,3 +25,13 @@ https://www.docker.com/products/docker-desktop
 ----
 **4. Устанавливаем плагины. Создаем аккаунт**<br><br>
 После создания аккаунта, нам больше не понадобится пароль из  ```docker logs```.
+
+----
+**5. Создаем проект/задачу.**<br><br>
+- ```new_item -> freestyle_project``` 
+
+----
+**6. Конфигурируем.**<br><br>
+Создаем **build steps**:<br>
+Во вкладке **Build** -> ```Executed shell``` 
+
