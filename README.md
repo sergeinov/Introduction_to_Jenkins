@@ -68,4 +68,18 @@ https://www.docker.com/products/docker-desktop
 
 ----
 **8. Интеграция с GitHub.**<br><br>
+*Для сборки должны быть необходимые зависимости для успешной сборки Java проекта.<br>
+Шаги:<br>
+1. ``` Configure -> Source Code Management```
+2. Перключаем на ```Git```
+3. Вставляем в *Repository URL*. Например: ```https://github.com/legionqa/ChessGame.git````
+4. Добавляем в один из``` Add build step ```-> ```Invoke top-level Maven targets```.<br>
+Так как сборка просиходит через Maven
+5. Выбираем версию Maven
+Далее необходимы команды для Maven:  ```https://maven.apache.org/plugins/index.html```<br>
+6. В поле ```Goals```, под установкой версии Maven вставляем команду ```compile```
+7. Собираем проект.
+8. После заглядываем в ```Console Output```. Можно посмотреть какие git команды запускаются.<br>
+В ```Workspace``` скачались файлы с git репозитория
 
+*Если репозиторий не публичный будет необходима настройка *Credential*
